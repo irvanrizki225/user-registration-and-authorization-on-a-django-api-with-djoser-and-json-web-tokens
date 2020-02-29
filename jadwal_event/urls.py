@@ -20,7 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
-    
+
     path("api/akun/", include("akun.urls")),
     # path("api/event/" include("event.urls")),
 ]

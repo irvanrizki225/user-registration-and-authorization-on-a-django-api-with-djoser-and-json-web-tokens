@@ -1,15 +1,15 @@
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
-from .views import UserProfileListCreateView, UserProfileDetailView
+from .views import UserProfileListCreateView, userProfileDetailView
 
-# router = DefaultRouter()
-#
-# router.register("all-profiles", UserProfileListCreateView)
-# router.register("profile/<int:pk",UserProfileDetailView,basename='profile')
+# router=DefaultRouter()
+
+# router.register("all-profiles",UserProfileListCreateView)
+# router.register("profile/<int:pk>",userProfileDetailView,basename='profile')
 
 urlpatterns = [
-    path("all-profiles", UserProfileListCreateView.as_view(),name="all-profiles"),
-    path("profile/<int:pk>",UserProfileDetailView.as_view(),name="profile"),
+    path("all-profiles",UserProfileListCreateView.as_view(),name="all-profiles"),
+    path("profile/<int:pk>",userProfileDetailView.as_view(),name="profile")
     # path("",include(router.urls))
 ]
